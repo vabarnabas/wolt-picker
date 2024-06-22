@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import clsx from "clsx";
 import Navbar from "@/components/navbar/navbar";
 import ModalHandler from "@/components/modals/modal-handler";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const font = localFont({
   src: [
@@ -48,6 +49,7 @@ export default function RootLayout({
           {children}
         </div>
         <ModalHandler />
+        <SpeedInsights />
       </body>
     </html>
   );
