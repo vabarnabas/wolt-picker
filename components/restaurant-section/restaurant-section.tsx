@@ -18,11 +18,14 @@ export default function RestaurantSection() {
     <>
       <div className="mt-8 flex items-center justify-between">
         <p className="font-wolt text-3xl font-semibold">Our Random Picks</p>
-        <button onClick={() => resort()}>
-          <IoMdRefresh className="text-wolt-blue text-3xl" />
+        <button
+          className="text-wolt-blue flex gap-x-1 items-center"
+          onClick={() => resort()}
+        >
+          <IoMdRefresh className="text-xl" />
+          Refresh
         </button>
       </div>
-
       {restaurantIsValidating ? (
         <div className="flex flex-col justify-center items-center h-full flex-grow">
           <Spinner />

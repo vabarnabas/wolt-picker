@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import clsx from "clsx";
 import Navbar from "@/components/navbar/navbar";
+import ModalHandler from "@/components/modals/modal-handler";
 
 const font = localFont({
   src: [
@@ -46,6 +47,7 @@ export default function RootLayout({
         <div className="w-full max-w-[1600px] px-4 pb-8 pt-[5.5rem] md:px-6 min-h-screen flex flex-col">
           {children}
         </div>
+        <ModalHandler />
       </body>
     </html>
   );

@@ -18,9 +18,9 @@ export default function RestaurantCard({ restaurant }: Props) {
       //     )}`
       //   );
       // }}
-      className="relative flex h-max w-full min-w-0 max-w-full cursor-pointer flex-col rounded-lg bg-white shadow-md transition-all duration-300 ease-out hover:scale-[103%]"
+      className="relative flex h-max w-full min-w-0 max-w-full cursor-pointer flex-col rounded-lg bg-white shadow hover:shadow-md transition-all duration-300 ease-out hover:scale-[103%]"
     >
-      <div className="relative h-[60%] min-h-[10rem] overflow-hidden rounded-t-lg">
+      <div className="relative aspect-wolt overflow-hidden rounded-t-lg">
         <Image
           src={restaurant.image.url}
           layout="fill"
@@ -41,7 +41,7 @@ export default function RestaurantCard({ restaurant }: Props) {
             {restaurant.venue.short_description}
           </p>
         </div>
-        <div className="ml-auto flex w-max flex-col items-center justify-center rounded-lg bg-wolt-blue/[8%] px-2 py-1 text-wolt-blue">
+        <div className="flex w-max flex-col items-center justify-center rounded-lg bg-wolt-blue/[8%] px-2 py-1 text-wolt-blue">
           <p className="w-max text-sm">{restaurant.venue.estimate_range}</p>
           <p className="text-xs opacity-[64%]">min</p>
         </div>

@@ -14,6 +14,10 @@ const config: Config = {
       colors: {
         "light-gray": "#202125",
         "wolt-blue": "#009DE0",
+        "border-gray": "#e4e4e5",
+      },
+      aspectRatio: {
+        wolt: "1 / 0.46",
       },
     },
   },

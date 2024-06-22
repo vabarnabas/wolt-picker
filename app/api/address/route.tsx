@@ -2,20 +2,19 @@ import { NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const lat = searchParams.get("lat");
-  const lon = searchParams.get("lon");
+  const address = searchParams.get("address");
 
-  if (!lat || !lon) {
+  if (!address) {
     return new Response("Bad Request", { status: 400 });
   }
 
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_RESTAURANT_API_URL}/v1/pages/restaurants?lat=${lat}&lon=${lon}`
+    `${process.env.NEXT_PUBLIC_GEOLOCATION_API_URL}/search?q=${address}&format=json&addressdetails=1&limit=1`
   );
   const data = await response.json();
 
-  if (data.sections.length !== 2) {
-    return new Response("Bad Request", { status: 400 });
+  if (!data) {
+    return new Response("Not Found", { status: 404 });
   }
 
   return Response.json(data);

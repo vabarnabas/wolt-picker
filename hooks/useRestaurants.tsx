@@ -1,10 +1,14 @@
+import useAddressStore from "@/stores/address.store";
 import { Restaurant } from "@/types/restaurant.types";
 import { useCallback, useMemo } from "react";
 import useSWR from "swr";
 
 export default function useRestaurants() {
+  const lat = useAddressStore((state) => state.currentAddress.lat);
+  const lon = useAddressStore((state) => state.currentAddress.lon);
+
   const response = useSWR<Restaurant[]>(
-    "/api/proxy/restaurants?lat=47.53825885969044&lon=19.14128898827805",
+    `/api/proxy/restaurants?lat=${lat}&lon=${lon}`,
     async (url) => {
       const response = await fetch(url);
       return await response.json();
