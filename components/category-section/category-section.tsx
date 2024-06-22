@@ -3,7 +3,7 @@ import React from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
 import CategoryCard from "../category-card/category-card";
 import { Category } from "@/types/category.types";
-import { IoRestaurant } from "react-icons/io5";
+import { IoGrid, IoRestaurant } from "react-icons/io5";
 import Spinner from "../spinner/spinner";
 
 export default function CategorySection() {
@@ -23,11 +23,11 @@ export default function CategorySection() {
           </div>
         ) : categoryError || !categories ? (
           <div className="flex flex-col justify-center items-center h-full flex-grow">
-            <div className="h-24 w-24 bg-wolt-blue/10 rounded-full flex justify-center items-center">
-              <IoRestaurant className="text-wolt-blue text-6xl" />
+            <div className="h-24 w-24 bg-wolt-blue/[8%] rounded-full flex justify-center items-center">
+              <IoGrid className="text-wolt-blue text-6xl" />
             </div>
             <p className="font-semibold font-wolt text-3xl mt-4">
-              Failed to Load Restaurants
+              Failed to Load Categories
             </p>
             <p className="opacity-60 mt-0.5">
               Please check your address or try again later

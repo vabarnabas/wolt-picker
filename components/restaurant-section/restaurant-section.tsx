@@ -32,7 +32,7 @@ export default function RestaurantSection() {
         </div>
       ) : restaurantError || !restaurants ? (
         <div className="flex flex-col justify-center items-center h-full flex-grow">
-          <div className="h-24 w-24 bg-wolt-blue/10 rounded-full flex justify-center items-center">
+          <div className="h-24 w-24 bg-wolt-blue/[8%] rounded-full flex justify-center items-center">
             <IoRestaurant className="text-wolt-blue text-6xl" />
           </div>
           <p className="font-semibold font-wolt text-3xl mt-4">
@@ -44,7 +44,7 @@ export default function RestaurantSection() {
         </div>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-          {getRandomRestaurants(6).map((restaurant) => (
+          {getRandomRestaurants(600).map((restaurant) => (
             <RestaurantCard key={restaurant.track_id} restaurant={restaurant} />
           ))}
         </div>

@@ -62,15 +62,15 @@ export default function BaseModal({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="scrollbar-hide mx-4 w-full max-w-md transform rounded-2xl bg-white p-4 text-left align-middle shadow-xl transition-all">
+              <DialogPanel className="scrollbar-hide mx-4 w-full  max-w-md transform rounded-2xl bg-white p-4 text-left align-middle shadow-xl transition-all">
                 {title ? (
                   <DialogTitle>
-                    <p className="mt-2 font-wolt text-3xl font-semibold">
+                    <p className="mt-2 font-wolt text-3xl font-semibold py-4">
                       {title}
                     </p>
                   </DialogTitle>
                 ) : null}
-                <div className="scrollbar-hide flex h-full min-h-[80px] w-full">
+                <div className="scrollbar-hide max-h-[30rem] overflow-y-scroll flex h-full min-h-[80px] w-full">
                   {!isFetching ? (
                     children
                   ) : (

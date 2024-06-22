@@ -11,5 +11,7 @@ export default function ModalHandler() {
   if (currentModal.modal === ModalTypes.ADDRESS)
     return <AddressSelectorModal />;
 
+  if (currentModal.modal === ModalTypes.NEW_ADDRESS) return <NewAddressModal />;
+
   return null;
 }
