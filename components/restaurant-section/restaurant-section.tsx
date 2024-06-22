@@ -44,7 +44,7 @@ export default function RestaurantSection() {
         </div>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-          {getRandomRestaurants(600).map((restaurant) => (
+          {getRandomRestaurants(6).map((restaurant) => (
             <RestaurantCard key={restaurant.track_id} restaurant={restaurant} />
           ))}
         </div>
