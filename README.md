@@ -25,8 +25,6 @@ Wolt is a Finnish food delivery company known for its excellent service across m
 
 Please note, Wolt Picker is not an official product of Wolt and is in no way affiliated with the company.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 Given its modest scope, this project exclusively needs a frontend, leading to a more streamlined tech stack.
@@ -35,10 +33,6 @@ Given its modest scope, this project exclusively needs a frontend, leading to a 
 - TailwindCSS
 - Zustand
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Usage
 
 Simply enter a new address when necessary, and if Wolt offers delivery to that location, you'll get random recommendations. With just one click, you can be redirected to the Wolt website to place your order.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
