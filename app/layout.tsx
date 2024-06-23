@@ -46,13 +46,13 @@ export default function RootLayout({
       </head>
       <body
         className={clsx(
-          "flex flex-col items-center",
+          "min-h-screen flex flex-col items-center",
           font.variable,
           inter.className
         )}
       >
         <Navbar />
-        <div className="w-full max-w-[1600px] px-4 pb-4 pt-[5.5rem] md:px-6 min-h-screen flex flex-col">
+        <div className="w-full max-w-[1600px] px-4 pb-4 pt-[5.5rem] md:px-6 flex-grow flex flex-col">
           {children}
         </div>
         <Footer />
