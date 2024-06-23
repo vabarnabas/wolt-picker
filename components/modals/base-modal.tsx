@@ -62,10 +62,10 @@ export default function BaseModal({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="scrollbar-hide mx-4 w-full  max-w-md transform rounded-2xl bg-white p-4 text-left align-middle shadow-xl transition-all">
+              <DialogPanel className="scrollbar-hide mx-4 w-full max-w-md transform rounded-2xl bg-white pt-6 pb-4 px-4 text-left align-middle shadow-xl transition-all">
                 {title ? (
                   <DialogTitle>
-                    <p className="mt-2 font-wolt text-3xl font-semibold py-4">
+                    <p className="font-wolt text-3xl font-semibold mb-4">
                       {title}
                     </p>
                   </DialogTitle>
