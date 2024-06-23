@@ -6,6 +6,7 @@ import clsx from "clsx";
 import Navbar from "@/components/navbar/navbar";
 import ModalHandler from "@/components/modals/modal-handler";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/footer/footer";
 
 const font = localFont({
   src: [
@@ -51,9 +52,10 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <div className="w-full max-w-[1600px] px-4 pb-8 pt-[5.5rem] md:px-6 min-h-screen flex flex-col">
+        <div className="w-full max-w-[1600px] px-4 pb-4 pt-[5.5rem] md:px-6 min-h-screen flex flex-col">
           {children}
         </div>
+        <Footer />
         <ModalHandler />
         <SpeedInsights />
       </body>
